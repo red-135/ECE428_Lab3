@@ -1,0 +1,10 @@
+NET "clk_in" LOC = L15;
+
+NET "reset" LOC = P3;
+NET "prog_request" LOC = N4;
+NET "freq_select" LOC = A10;
+
+INST "clk_out" LOC = T3;
+
+NET "prog_done" LOC = U18;
+NET "locked" LOC = M14;
