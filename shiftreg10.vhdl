@@ -14,6 +14,9 @@ end shiftreg10;
 
 architecture behavioral of shiftreg10 is
 	signal reg : std_logic_vector (9 downto 0);
+	
+	attribute keep : string;
+	attribute keep of reg : signal is "true";	
 begin
 	shout <= reg(0);
 	

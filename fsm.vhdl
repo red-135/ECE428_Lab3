@@ -26,7 +26,7 @@ architecture behavioral of fsm is
 		sloadd1arg_prep, sloadd2arg_prep, sloaddarg, sloaddarg_to_sloadmarg_prep, 
 		sloadmarg_prep, sloadmarg, sgo_prep, sgo, swaitprog, sidle
 	);
-	signal current_state, next_state : state_type;
+	signal current_state, next_state : state_type := sidle;
 	
 	signal count_1x : std_logic;
 	signal count_10x : std_logic;
@@ -46,7 +46,7 @@ begin
 	begin
 		if (reset = '1') then
 			current_state <= sidle;
-		elsif rising_edge(clk) then
+		elsif (rising_edge(clk)) then
 			current_state <= next_state;
 		end if;
 	end process;
